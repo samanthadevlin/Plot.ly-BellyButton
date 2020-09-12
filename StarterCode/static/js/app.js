@@ -14,14 +14,18 @@ console.log(samples);
 
 //Get the top ten samples
 var samplevalues = samples.sample_values.slice(0, 10).reverse();
+//Check your filtered samples
+console.log(samplevalues);
 
 //Reverse the array to accommodate Plotly defaults 
-var OTU_top = (samples.otu_ids.slice(0, 10)).reverse();
+//Use slice to get the top ten samples 
+var otu_top = (samples.otu_ids.slice(0, 10)).reverse();
         
 //Use otu_ids as labels for bar chart
 var otu_id = otu_top.map(d => 'otu' + d)
 
 //Get the top ten otu labels for the bar chart 
+//Use slice to get the top ten samples 
 var labels = samples.otu_labels.slice(0,10);
 
 //Trace1 for the otu data
